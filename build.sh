@@ -99,10 +99,10 @@ FILE=kfctl_v0.7.2-rc.0-0-g4df0157_linux.tar.gz
 if test -f "$FILE"; then
     echo "$FILE exist. Would not download it again"
 else
-   wget https://github.com/kubeflow/kfctl/releases/download/v0.7.2-rc.0/kfctl_v0.7.2-rc.0-0-g4df0157_linux.tar.gz
+   wget https://github.com/kubeflow/kfctl/releases/download/v0.7.2-rc.0/$FILE
    #wget https://github.com/kubeflow/kfctl/releases/download/v1.0-rc.1/kfctl_v1.0-rc.1-0-g963c787_linux.tar.gz
 fi
-tar -xvzf  kfctl_v0.7.2-rc.0-0-g4df0157_linux.tar.gz
+tar -xvzf  $FILE
 
 export BASE_DIR=$PWD
 export KF_DIR=${BASE_DIR}/${KF_NAME}
