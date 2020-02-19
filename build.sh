@@ -84,7 +84,7 @@ else
 	echo "Config URI set to $CONFIG_URI"
 fi
 
-echo "Downloading kubectl from kfctl_v0.7.0_linux.tar.gz"
+echo "Downloading kubectl from kfctl_v1.rc3_linux.tar.gz"
 echo "Kubectl will be downloaded at location : " 
 echo $PWD
 echo "Would you like to continue (Y/N)"
@@ -94,12 +94,12 @@ then
 	echo "Exiting ... " 
 fi
 
-FILE=kfctl_v0.7.2-rc.0-0-g4df0157_linux.tar.gz
+FILE=kfctl_v1.0-rc.3-1-g24b60e8_linux.tar.gz
 
 if test -f "$FILE"; then
     echo "$FILE exist. Would not download it again"
 else
-   wget https://github.com/kubeflow/kfctl/releases/download/v0.7.2-rc.0/$FILE
+   wget https://github.com/kubeflow/kfctl/releases/download/v1.0-rc.4/$FILE
    #wget https://github.com/kubeflow/kfctl/releases/download/v1.0-rc.1/kfctl_v1.0-rc.1-0-g963c787_linux.tar.gz
 fi
 tar -xvzf  $FILE
